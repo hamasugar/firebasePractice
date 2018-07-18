@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="googleLogin1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Jwh-QT-Foi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1D7-Mz-SFT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AZH-od-RAv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1D7-Mz-SFT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0uB-70-6fH"/>
+                            <constraint firstItem="1D7-Mz-SFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6MJ-3p-QhE"/>
+                            <constraint firstItem="Jwh-QT-Foi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8e2-dc-Dy9"/>
+                            <constraint firstItem="Jwh-QT-Foi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ke-Du-9Sc"/>
+                            <constraint firstItem="Jwh-QT-Foi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GEM-eO-buW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1D7-Mz-SFT" secondAttribute="trailing" id="TBm-VE-WXr"/>
+                            <constraint firstItem="Jwh-QT-Foi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UOq-aV-2QX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1D7-Mz-SFT" secondAttribute="bottom" id="jQc-Y2-9MZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="1Qb-87-jv0" kind="presentation" identifier="next" id="jqD-pa-tS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="124.58770614692655"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="SaV-I7-8dH">
+            <objects>
+                <viewController id="1Qb-87-jv0" customClass="NextViewController" customModule="googleLogin1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dRy-5c-sIq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZnC-Uc-Trp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QB8-oG-5Aq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ePB-1Y-b3l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログインに成功しました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSq-Cx-YDM">
+                                            <rect key="frame" x="0.0" y="313" width="375" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PSq-Cx-YDM" firstAttribute="centerX" secondItem="ePB-1Y-b3l" secondAttribute="centerX" id="IDs-xr-gsV"/>
+                                        <constraint firstItem="PSq-Cx-YDM" firstAttribute="leading" secondItem="ePB-1Y-b3l" secondAttribute="leading" id="O3R-jv-wLp"/>
+                                        <constraint firstAttribute="trailing" secondItem="PSq-Cx-YDM" secondAttribute="trailing" id="jDt-Dt-hyp"/>
+                                        <constraint firstItem="PSq-Cx-YDM" firstAttribute="centerY" secondItem="ePB-1Y-b3l" secondAttribute="centerY" id="v66-S4-ZKU"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZnC-Uc-Trp" firstAttribute="leading" secondItem="uuc-WX-P0u" secondAttribute="leading" id="2TA-Q9-Qis"/>
+                            <constraint firstItem="QB8-oG-5Aq" firstAttribute="top" secondItem="uuc-WX-P0u" secondAttribute="top" id="Cz6-Ee-cIt"/>
+                            <constraint firstItem="ZnC-Uc-Trp" firstAttribute="top" secondItem="dRy-5c-sIq" secondAttribute="top" id="PIe-r8-sHf"/>
+                            <constraint firstItem="uuc-WX-P0u" firstAttribute="bottom" secondItem="QB8-oG-5Aq" secondAttribute="bottom" id="SqU-Iv-kBf"/>
+                            <constraint firstItem="QB8-oG-5Aq" firstAttribute="leading" secondItem="uuc-WX-P0u" secondAttribute="leading" id="Ve7-nj-G30"/>
+                            <constraint firstItem="uuc-WX-P0u" firstAttribute="bottom" secondItem="ZnC-Uc-Trp" secondAttribute="bottom" id="eax-Jf-rll"/>
+                            <constraint firstItem="uuc-WX-P0u" firstAttribute="trailing" secondItem="ZnC-Uc-Trp" secondAttribute="trailing" id="qft-iz-Mro"/>
+                            <constraint firstItem="uuc-WX-P0u" firstAttribute="trailing" secondItem="QB8-oG-5Aq" secondAttribute="trailing" id="w4h-76-IxA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uuc-WX-P0u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUd-mX-HAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="1440" height="2560"/>
+    </resources>
 </document>
