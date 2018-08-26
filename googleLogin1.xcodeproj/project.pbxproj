@@ -14,8 +14,10 @@
 		CE18FC1B20FFA42600F636B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE18FC1A20FFA42600F636B7 /* Assets.xcassets */; };
 		CE18FC1E20FFA42600F636B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE18FC1C20FFA42600F636B7 /* LaunchScreen.storyboard */; };
 		CE18FC2620FFA9C800F636B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE18FC2520FFA9C700F636B7 /* GoogleService-Info.plist */; };
-		CE18FC2820FFACDF00F636B7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE18FC2720FFACDF00F636B7 /* background.jpg */; };
 		CE18FC2A20FFADC900F636B7 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18FC2920FFADC900F636B7 /* NextViewController.swift */; };
+		CE5BA5482121C93500172395 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5BA5472121C93500172395 /* MemoViewController.swift */; };
+		CE7C179B21146CF4003EECC1 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C179A21146CF4003EECC1 /* CreateViewController.swift */; };
+		CEF71AB3211AE7B8001FA786 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71AB2211AE7B8001FA786 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +31,10 @@
 		CE18FC1D20FFA42600F636B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE18FC1F20FFA42600F636B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE18FC2520FFA9C700F636B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE18FC2720FFACDF00F636B7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		CE18FC2920FFADC900F636B7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		CE5BA5472121C93500172395 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		CE7C179A21146CF4003EECC1 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		CEF71AB2211AE7B8001FA786 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		D0123CE4A5AEE95EA20A9BBC /* Pods_googleLogin1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleLogin1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,10 +83,12 @@
 				CE18FC1320FFA41E00F636B7 /* AppDelegate.swift */,
 				CE18FC1520FFA41E00F636B7 /* ViewController.swift */,
 				CE18FC2920FFADC900F636B7 /* NextViewController.swift */,
+				CE7C179A21146CF4003EECC1 /* CreateViewController.swift */,
 				CE18FC1720FFA41E00F636B7 /* Main.storyboard */,
+				CEF71AB2211AE7B8001FA786 /* ListViewController.swift */,
+				CE5BA5472121C93500172395 /* MemoViewController.swift */,
 				CE18FC1A20FFA42600F636B7 /* Assets.xcassets */,
 				CE18FC1C20FFA42600F636B7 /* LaunchScreen.storyboard */,
-				CE18FC2720FFACDF00F636B7 /* background.jpg */,
 				CE18FC2520FFA9C700F636B7 /* GoogleService-Info.plist */,
 				CE18FC1F20FFA42600F636B7 /* Info.plist */,
 			);
@@ -159,7 +165,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE18FC1E20FFA42600F636B7 /* LaunchScreen.storyboard in Resources */,
-				CE18FC2820FFACDF00F636B7 /* background.jpg in Resources */,
 				CE18FC1B20FFA42600F636B7 /* Assets.xcassets in Resources */,
 				CE18FC1920FFA41E00F636B7 /* Main.storyboard in Resources */,
 				CE18FC2620FFA9C800F636B7 /* GoogleService-Info.plist in Resources */,
@@ -179,12 +184,14 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -234,8 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7C179B21146CF4003EECC1 /* CreateViewController.swift in Sources */,
 				CE18FC1620FFA41E00F636B7 /* ViewController.swift in Sources */,
+				CE5BA5482121C93500172395 /* MemoViewController.swift in Sources */,
 				CE18FC2A20FFADC900F636B7 /* NextViewController.swift in Sources */,
+				CEF71AB3211AE7B8001FA786 /* ListViewController.swift in Sources */,
 				CE18FC1420FFA41E00F636B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
